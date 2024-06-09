@@ -1,0 +1,17 @@
+.square {
+  width: 6vh;
+  height: 6vh;
+  background-color: inherit;
+  border: 0.3vh solid #cccccc4a;
+
+  border-radius: 1vh;
+
+  &.snake {
+    background-color: #3eff37;
+    border-color: #3eff37;
+  }
+  &.apple {
+    background-color: #ff3939;
+    border-color: #ff3939;
+  }
+}
