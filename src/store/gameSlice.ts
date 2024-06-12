@@ -14,14 +14,14 @@ const gameSlice = createSlice({
 
     snakeSize: 3,
     apple: { x: 1, y: 1 },
-    direction: 'd',
+    direction: 68,
     stopKeyCombinations: [
-      ['w', 's'],
-      ['s', 'w'],
-      ['a', 'd'],
-      ['d', 'a'],
+      [87, 83],
+      [83, 87],
+      [65, 68],
+      [68, 65],
     ],
-    saveKey: 'd',
+    saveKey: 68,
   },
   reducers: {
     changeStatus(state) {
@@ -43,16 +43,16 @@ const gameSlice = createSlice({
       if (state.status === 'Restart') return;
       let { x, y } = state.snakeHead;
       switch (state.direction) {
-        case 'd':
+        case 68:
           x = x >= 9 ? 0 : x + 1;
           break;
-        case 'a':
+        case 65:
           x = x <= 0 ? 9 : x - 1;
           break;
-        case 'w':
+        case 87:
           y = y <= 0 ? 9 : y - 1;
           break;
-        case 's':
+        case 83:
           y = y >= 9 ? 0 : y + 1;
           break;
         default:

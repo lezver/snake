@@ -11,9 +11,9 @@ function App() {
   const dispatch = useDispatch();
   const status = useSelector<RootState>(state => state.game.status);
 
-  const keyDownHandler = ({ key }: React.KeyboardEvent) => {
-    if (key === 'w' || key === 'd' || key === 's' || key === 'a')
-      dispatch(saveKey(key));
+  const keyDownHandler = ({ keyCode }: React.KeyboardEvent) => {
+    (keyCode === 87 || keyCode === 68 || keyCode === 83 || keyCode === 65) &&
+      dispatch(saveKey(keyCode));
   };
 
   return (
